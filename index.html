@@ -70,7 +70,7 @@
       margin: auto;
     }
 
-    /* TOP BAR */
+    /* ================= TOP BAR ================= */
 
     .topbar {
       background: var(--navy);
@@ -102,7 +102,7 @@
       color: var(--gold-light);
     }
 
-    /* NAVIGATION */
+    /* ================= NAVIGATION ================= */
 
     .navbar {
       position: sticky;
@@ -215,7 +215,7 @@
       transform: translateY(-2px);
     }
 
-    /* HERO */
+    /* ================= HERO ================= */
 
     .hero {
       position: relative;
@@ -334,7 +334,7 @@
       transform: translateY(-3px);
     }
 
-    /* HERO IMAGE */
+    /* ================= HERO IMAGE ================= */
 
     .hero-visual {
       position: relative;
@@ -402,7 +402,7 @@
       font-size: 16px;
     }
 
-    /* TRUST */
+    /* ================= TRUST ================= */
 
     .trust-strip {
       background: var(--navy);
@@ -451,7 +451,7 @@
       font-size: 10px;
     }
 
-    /* GENERAL */
+    /* ================= GENERAL ================= */
 
     .section {
       padding: 105px 0;
@@ -487,7 +487,7 @@
       font-size: 14px;
     }
 
-    /* SERVICES */
+    /* ================= SERVICES ================= */
 
     .services-grid {
       display: grid;
@@ -544,7 +544,7 @@
       line-height: 1.9;
     }
 
-    /* ABOUT */
+    /* ================= ABOUT ================= */
 
     .about-grid {
       display: grid;
@@ -656,7 +656,7 @@
       flex-shrink: 0;
     }
 
-    /* DOCTOR */
+    /* ================= DOCTOR ================= */
 
     .doctor-section {
       background: linear-gradient(135deg,var(--navy),var(--navy-2));
@@ -766,7 +766,7 @@
       font-size: 12px;
     }
 
-    /* CASE */
+    /* ================= CASE ================= */
 
     .case-card {
       background: white;
@@ -859,7 +859,7 @@
       font-size: 13px;
     }
 
-    /* CONTACT */
+    /* ================= CONTACT ================= */
 
     .contact-section {
       background: var(--cream);
@@ -967,6 +967,17 @@
       background: var(--gold-light);
     }
 
+    .contact-buttons .btn-outline {
+      color: white;
+      border-color: rgba(255,255,255,.25);
+      background: transparent;
+    }
+
+    .contact-buttons .btn-outline:hover {
+      color: var(--gold-light);
+      border-color: var(--gold);
+    }
+
     .contact-form {
       background: white;
       border-radius: 28px;
@@ -1029,8 +1040,932 @@
 
     .field input:focus,
     .field select:focus,
-    .field textarea
-        <section class="section" id="case">
+    .field textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(184,154,98,.1);
+    }
+
+    .form-note {
+      font-size: 10px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #05131b;
+      color: white;
+      padding: 58px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 43px;
+      border-bottom: 1px solid rgba(255,255,255,.09);
+    }
+
+    .footer-brand p {
+      color: rgba(255,255,255,.46);
+      font-size: 12px;
+      line-height: 2;
+      max-width: 390px;
+      margin-top: 14px;
+    }
+
+    .footer-title {
+      color: var(--gold-light);
+      font-size: 13px;
+      margin-bottom: 17px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 8px;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,.53);
+      font-size: 12px;
+      transition: .25s;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+      transform: translateX(-3px);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 21px;
+      color: rgba(255,255,255,.33);
+      font-size: 10px;
+    }
+
+    /* ================= FLOATING PHONE ================= */
+
+    .floating-call {
+      position: fixed;
+      bottom: 22px;
+      left: 22px;
+      z-index: 999;
+      width: 57px;
+      height: 57px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--gold);
+      color: var(--navy);
+      box-shadow: 0 12px 30px rgba(7,25,35,.25);
+      font-size: 19px;
+      transition: .3s;
+    }
+
+    .floating-call:hover {
+      transform: scale(1.08);
+      background: var(--gold-light);
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width:1000px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding: 60px 0;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        max-width: 680px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .about-grid,
+      .doctor-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .doctor-content {
+        text-align: center;
+      }
+
+      .doctor-content .eyebrow {
+        justify-content: center;
+      }
+
+      .doctor-content p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .doctor-details {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .case-card {
+        grid-template-columns: 1fr;
+      }
+
+      .case-image {
+        min-height: 420px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width:650px) {
+
+      .container {
+        width: min(100% - 28px,var(--container));
+      }
+
+      .topbar {
+        display: none;
+      }
+
+      .nav-inner {
+        min-height: 76px;
+      }
+
+      .brand-mark {
+        width: 43px;
+        height: 43px;
+        font-size: 18px;
+      }
+
+      .brand-text strong {
+        font-size: 15px;
+      }
+
+      .brand-text span {
+        font-size: 8px;
+      }
+
+      .nav-call {
+        padding: 9px 12px;
+        font-size: 10px;
+      }
+
+      .hero-inner {
+        min-height: auto;
+        padding: 55px 0 70px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero-description {
+        font-size: 13px;
+      }
+
+      .hero-visual {
+        min-height: 420px;
+      }
+
+      .hero-photo-frame {
+        inset: 10px 0 0 12px;
+        border-radius: 25px;
+      }
+
+      .hero-photo-frame img {
+        min-height: 420px;
+      }
+
+      .gold-frame {
+        inset: 0 12px 18px 0;
+        border-radius: 25px;
+      }
+
+      .hero-badge {
+        right: 8px;
+        bottom: 25px;
+        padding: 14px 18px;
+      }
+
+      .hero-badge strong {
+        font-size: 14px;
+      }
+
+      .trust-inner {
+        grid-template-columns: 1fr;
+        padding: 10px 0;
+      }
+
+      .trust-item {
+        border-left: 0;
+        border-bottom: 1px solid rgba(255,255,255,.08);
+        justify-content: flex-start;
+        padding: 14px 8px;
+      }
+
+      .trust-item:last-child {
+        border-bottom: 0;
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 35px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-visual {
+        min-height: 380px;
+      }
+
+      .about-box.main {
+        inset: 0 0 40px 35px;
+      }
+
+      .about-box.small {
+        width: 160px;
+        height: 130px;
+        left: 0;
+        bottom: 0;
+      }
+
+      .about-box.small strong {
+        font-size: 27px;
+      }
+
+      .doctor-photo {
+        max-width: 320px;
+      }
+
+      .doctor-details {
+        grid-template-columns: 1fr;
+      }
+
+      .case-image {
+        min-height: 330px;
+      }
+
+      .case-content {
+        padding: 30px 23px;
+      }
+
+      .case-content h2 {
+        font-size: 27px;
+      }
+
+      .case-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .case-meta div {
+        border-left: 0;
+        border-bottom: 1px solid #e7e4dd;
+      }
+
+      .case-meta div:last-child {
+        border-bottom: 0;
+      }
+
+      .contact-info,
+      .contact-form {
+        padding: 30px 23px;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .floating-call {
+        width: 52px;
+        height: 52px;
+        left: 15px;
+        bottom: 15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+
+  <div class="topbar">
+
+    <div class="container topbar-inner">
+
+      <div class="topbar-right">
+        <span>عيادة شام لطب الأسنان</span>
+        <span>رعاية دقيقة · ابتسامة طبيعية</span>
+      </div>
+
+      <div class="topbar-left">
+        <a href="tel:+963948502752">
+          +963 948 502 752
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- NAVIGATION -->
+
+  <header class="navbar">
+
+    <div class="container nav-inner">
+
+      <a href="#home" class="brand">
+
+        <div class="brand-mark">
+          S
+        </div>
+
+        <div class="brand-text">
+
+          <strong>
+            شام لطب الأسنان
+          </strong>
+
+          <span>
+            SHAM DENTAL CLINIC
+          </span>
+
+        </div>
+
+      </a>
+
+
+      <nav class="nav-links">
+
+        <a href="#home">الرئيسية</a>
+        <a href="#services">خدماتنا</a>
+        <a href="#about">عن العيادة</a>
+        <a href="#doctor">الدكتور</a>
+        <a href="#case">حالة علاجية</a>
+        <a href="#contact">تواصل معنا</a>
+
+      </nav>
+
+
+      <a class="nav-call" href="tel:+963948502752">
+        ☎ اتصل الآن
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <main id="home">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="container hero-inner">
+
+        <div class="hero-content">
+
+          <div class="eyebrow">
+            شام لطب الأسنان
+          </div>
+
+          <h1>
+            ابتسامة تُصنع
+            <span>بدقة.</span>
+          </h1>
+
+          <p class="hero-description">
+            لأن التفاصيل الصغيرة تصنع الفرق الكبير،
+            نقدم في عيادة شام لطب الأسنان عناية تجمع بين
+            الدقة الطبية والاهتمام بالجمال الطبيعي للابتسامة.
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="tel:+963948502752" class="btn btn-primary">
+              ☎ احجز استشارتك
+            </a>
+
+            <a
+              href="https://wa.me/963948502752"
+              class="btn btn-outline"
+              target="_blank"
+              rel="noopener"
+            >
+              واتساب
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+          <div class="hero-photo-frame">
+
+            <img
+              src="IMG_20260928_034242_657.jpg"
+              alt="الدكتور عامر العبود"
+            >
+
+          </div>
+
+          <div class="gold-frame"></div>
+
+          <div class="hero-badge">
+
+            <small>
+              طبيب الأسنان
+            </small>
+
+            <strong>
+              د. عامر العبود
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TRUST -->
+
+    <section class="trust-strip">
+
+      <div class="container trust-inner">
+
+        <div class="trust-item">
+
+          <div class="trust-icon">
+            ✦
+          </div>
+
+          <div>
+            <strong>
+              دقة في التفاصيل
+            </strong>
+
+            <span>
+              نهتم بكل مرحلة من مراحل العلاج
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <div class="trust-icon">
+            ◇
+          </div>
+
+          <div>
+            <strong>
+              عناية شخصية
+            </strong>
+
+            <span>
+              خطة علاجية تناسب احتياجات كل مريض
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="trust-item">
+
+          <div class="trust-icon">
+            ◌
+          </div>
+
+          <div>
+            <strong>
+              جمال طبيعي
+            </strong>
+
+            <span>
+              هدفنا ابتسامة متناسقة وطبيعية
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="section" id="services">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="mini">
+            خدمات العيادة
+          </div>
+
+          <h2>
+            عناية متكاملة لابتسامتك
+          </h2>
+
+          <p>
+            مجموعة من خدمات طب وتجميل الأسنان ضمن رؤية تهتم
+            بالصحة والدقة والنتيجة الجمالية.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+          <article class="service-card">
+
+            <div class="service-number">
+              01
+            </div>
+
+            <h3>
+              تجميل الأسنان
+            </h3>
+
+            <p>
+              حلول تجميلية مدروسة لتحسين شكل الابتسامة
+              مع الحفاظ على مظهر طبيعي ومتناسق.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-number">
+              02
+            </div>
+
+            <h3>
+              ترميم الأسنان
+            </h3>
+
+            <p>
+              معالجة وترميم الأسنان بما يساعد على استعادة
+              الوظيفة والمظهر الجمالي.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-number">
+              03
+            </div>
+
+            <h3>
+              العناية باللثة
+            </h3>
+
+            <p>
+              الاهتمام بصحة اللثة ومعالجة المشكلات التي
+              قد تؤثر في صحة الفم وجمال الابتسامة.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-number">
+              04
+            </div>
+
+            <h3>
+              تنظيف الأسنان
+            </h3>
+
+            <p>
+              عناية دورية تساعد على الحفاظ على نظافة
+              الأسنان وصحة الفم.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-number">
+              05
+            </div>
+
+            <h3>
+              استشارات الأسنان
+            </h3>
+
+            <p>
+              تقييم الحالة ومناقشة الخيارات العلاجية
+              المناسبة قبل البدء بالخطة.
+            </p>
+
+          </article>
+
+
+          <article class="service-card">
+
+            <div class="service-number">
+              06
+            </div>
+
+            <h3>
+              تصميم الابتسامة
+            </h3>
+
+            <p>
+              دراسة شكل الأسنان والابتسامة للوصول إلى
+              نتيجة متناسقة مع ملامح الوجه.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section section-soft" id="about">
+
+      <div class="container about-grid">
+
+
+        <div class="about-visual">
+
+          <div class="about-box main">
+
+            <img
+              src="Screenshot_٢٠٢٦-٠٩-٢٨-٠٣-٠٢-٢٩-٢٤_1c337646f29875672b5a61192b9010f9.jpg"
+              alt="حالة من عيادة شام لطب الأسنان"
+            >
+
+          </div>
+
+
+          <div class="about-box small">
+
+            <div>
+
+              <strong>
+                SHAM
+              </strong>
+
+              <span>
+                Dental Clinic
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+          <div class="eyebrow">
+            عن عيادة شام
+          </div>
+
+          <h2>
+            الطب الدقيق،
+            والجمال الذي يبدو طبيعيًا.
+          </h2>
+
+          <p>
+            في عيادة شام لطب الأسنان نؤمن بأن العلاج الناجح
+            لا يقتصر على معالجة المشكلة، بل يبدأ بفهم احتياجات
+            المريض والوصول إلى نتيجة صحية وجمالية متوازنة.
+          </p>
+
+
+          <div class="about-list">
+
+            <div>
+              <span>✓</span>
+              <p>اهتمام بالتفاصيل في كل مرحلة من مراحل العمل.</p>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <p>اختيار الحل المناسب بناءً على حالة كل مريض.</p>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <p>التركيز على التناسق والمظهر الطبيعي للابتسامة.</p>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <p>تواصل واضح مع المريض قبل وأثناء خطة العلاج.</p>
+            </div>
+
+          </div>
+
+
+          <a href="tel:+963948502752" class="btn btn-primary">
+            تواصل مع العيادة
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DOCTOR -->
+
+    <section class="section doctor-section" id="doctor">
+
+      <div class="container doctor-grid">
+
+
+        <div class="doctor-photo">
+
+          <div class="doctor-photo-inner">
+
+            <img
+              src="IMG_20260928_034242_657.jpg"
+              alt="الدكتور عامر العبود - عيادة شام لطب الأسنان"
+            >
+
+          </div>
+
+        </div>
+
+
+        <div class="doctor-content">
+
+          <div class="eyebrow">
+            طبيب العيادة
+          </div>
+
+          <h2>
+            د. عامر العبود
+          </h2>
+
+          <div class="doctor-name">
+            Amer Alabboud
+          </div>
+
+          <p>
+            يحرص الدكتور عامر العبود على تقديم رعاية سنية
+            تجمع بين الدقة والاهتمام بالتفاصيل، مع التركيز
+            على الوصول إلى نتائج علاجية وجمالية متوازنة
+            تتناسب مع احتياجات كل مريض.
+          </p>
+
+
+          <div class="doctor-details">
+
+            <div class="doctor-detail">
+
+              <span>
+                المجال
+              </span>
+
+              <strong>
+                طب وتجميل الأسنان
+              </strong>
+
+            </div>
+
+
+            <div class="doctor-detail">
+
+              <span>
+                العيادة
+              </span>
+
+              <strong>
+                شام لطب الأسنان
+              </strong>
+
+            </div>
+
+
+            <div class="doctor-detail">
+
+              <span>
+                التواصل
+              </span>
+
+              <strong dir="ltr">
+                +963 948 502 752
+              </strong>
+
+            </div>
+
+
+            <div class="doctor-detail">
+
+              <span>
+                الاستشارات
+              </span>
+
+              <strong>
+                بالتواصل مع العيادة
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <a
+            href="https://wa.me/963948502752"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-primary"
+          >
+            تواصل مع د. عامر عبر واتساب
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CASE -->
+
+    <section class="section" id="case">
 
       <div class="container">
 
@@ -1053,6 +1988,7 @@
 
 
         <div class="case-card">
+
 
           <div class="case-image">
 
@@ -1089,23 +2025,54 @@
             <div class="case-meta">
 
               <div>
-                <span>نوع العمل</span>
-                <strong>سوبرانو</strong>
+
+                <span>
+                  نوع العمل
+                </span>
+
+                <strong>
+                  سوبرانو
+                </strong>
+
               </div>
 
-              <div>
-                <span>اللون</span>
-                <strong>B1</strong>
-              </div>
 
               <div>
-                <span>العيادة</span>
-                <strong>شام لطب الأسنان</strong>
+
+                <span>
+                  اللون
+                </span>
+
+                <strong>
+                  B1
+                </strong>
+
               </div>
 
+
               <div>
-                <span>الطبيب</span>
-                <strong>عامر العبود</strong>
+
+                <span>
+                  العيادة
+                </span>
+
+                <strong>
+                  شام لطب الأسنان
+                </strong>
+
+              </div>
+
+
+              <div>
+
+                <span>
+                  الطبيب
+                </span>
+
+                <strong>
+                  عامر العبود
+                </strong>
+
               </div>
 
             </div>
@@ -1123,6 +2090,8 @@
 
     </section>
 
+
+    <!-- CONTACT -->
 
     <section class="section contact-section" id="contact">
 
@@ -1154,10 +2123,15 @@
             </div>
 
             <div>
-              <span>الهاتف</span>
+
+              <span>
+                الهاتف
+              </span>
+
               <strong dir="ltr">
                 +963 948 502 752
               </strong>
+
             </div>
 
           </a>
@@ -1175,10 +2149,15 @@
             </div>
 
             <div>
-              <span>واتساب</span>
+
+              <span>
+                واتساب
+              </span>
+
               <strong>
                 تواصل مباشرة عبر واتساب
               </strong>
+
             </div>
 
           </a>
@@ -1217,6 +2196,7 @@
 
 
           <div class="form-grid">
+
 
             <div class="field">
 
@@ -1316,8 +2296,7 @@
           </a>
 
           <p class="form-note">
-            ملاحظة: النموذج أعلاه مخصص لتجهيز بيانات الاستشارة،
-            والإرسال يتم عبر واتساب.
+            يمكنك نسخ تفاصيل استشارتك والتواصل معنا مباشرة عبر واتساب.
           </p>
 
         </div>
@@ -1328,6 +2307,8 @@
 
   </main>
 
+
+  <!-- FOOTER -->
 
   <footer>
 
@@ -1345,6 +2326,7 @@
             </div>
 
             <div class="brand-text">
+
               <strong style="color:white;">
                 شام لطب الأسنان
               </strong>
@@ -1352,9 +2334,11 @@
               <span style="color:var(--gold-light);">
                 SHAM DENTAL CLINIC
               </span>
+
             </div>
 
           </a>
+
 
           <p>
             عيادة شام لطب الأسنان — رؤية تجمع بين الدقة الطبية
@@ -1445,6 +2429,8 @@
 
   </footer>
 
+
+  <!-- FLOATING PHONE -->
 
   <a
     href="tel:+963948502752"
