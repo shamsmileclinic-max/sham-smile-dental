@@ -4,34 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>عيادة شام لطب الأسنان | الدكتور عامر العبود</title>
-  <meta name="description" content="عيادة شام لطب الأسنان - الدكتور عامر العبود">
+  <title>شام لطب الأسنان | الدكتور عامر العبود</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
 
     :root {
-      --navy: #0b1d2a;
-      --navy-light: #122d3d;
-
-      --ivory: #f7f4ee;
-      --white: #fffdf9;
-
-      --gold: #b99a62;
-      --gold-light: #d7c092;
-
-      --text: #17232c;
-      --muted: #707a80;
-
-      --border: rgba(185,154,98,.25);
-
-      --shadow: 0 25px 70px rgba(11,29,42,.12);
-
-      --radius: 22px;
+      --dark: #0b1c28;
+      --dark2: #132d3c;
+      --gold: #b89a62;
+      --gold2: #d8c08f;
+      --cream: #f7f4ed;
+      --white: #ffffff;
+      --text: #17242d;
+      --gray: #747d82;
     }
 
     * {
@@ -46,150 +35,1062 @@
 
     body {
       font-family: "Cairo", sans-serif;
-      background: var(--white);
       color: var(--text);
-      line-height: 1.9;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+      background: var(--white);
+      line-height: 1.8;
     }
 
     img {
-      max-width: 100%;
+      width: 100%;
       display: block;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     .container {
-      width: min(1180px, calc(100% - 40px));
+      width: min(1150px, calc(100% - 36px));
       margin: auto;
     }
 
-    /* =========================
-       TOP BAR
-    ========================== */
+    /* NAV */
 
-    .topbar {
-      background: var(--navy);
-      color: rgba(255,255,255,.8);
-      font-size: 13px;
-      padding: 8px 0;
-    }
-
-    .topbar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    /* =========================
-       NAVIGATION
-    ========================== */
-
-    .navbar {
+    header {
       position: sticky;
       top: 0;
       z-index: 1000;
-
-      background: rgba(255,253,249,.96);
-      backdrop-filter: blur(14px);
-
-      border-bottom: 1px solid rgba(11,29,42,.08);
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eeeeee;
     }
 
-    .nav-inner {
-      min-height: 82px;
-
+    .nav {
+      height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-
       gap: 30px;
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 13px;
+      gap: 12px;
     }
 
-    .logo-mark {
-      width: 45px;
-      height: 45px;
-
+    .brand-icon {
+      width: 43px;
+      height: 43px;
       border: 1px solid var(--gold);
       border-radius: 50%;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       color: var(--gold);
       font-family: "Playfair Display", serif;
       font-size: 22px;
     }
 
-    .logo-text strong {
+    .brand strong {
       display: block;
-      color: var(--navy);
-      font-size: 18px;
-      font-weight: 800;
+      color: var(--dark);
+      font-size: 17px;
       line-height: 1.2;
     }
 
-    .logo-text span {
-      display: block;
+    .brand small {
       color: var(--gold);
-      font-size: 11px;
-      letter-spacing: 1px;
+      font-size: 9px;
+      letter-spacing: 1.5px;
     }
 
-    .nav-links {
+    .menu {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 27px;
     }
 
-    .nav-links a {
-      color: var(--text);
-      font-size: 14px;
+    .menu a {
+      font-size: 13px;
       font-weight: 600;
-      transition: .25s ease;
+      transition: .25s;
     }
 
-    .nav-links a:hover {
+    .menu a:hover {
       color: var(--gold);
     }
 
-    .nav-button {
-      padding: 10px 19px;
-
-      background: var(--navy);
-      color: white !important;
-
-      border-radius: 4px;
-
-      transition: .25s ease;
+    .menu .contact-link {
+      color: white;
+      background: var(--dark);
+      padding: 10px 18px;
+      border-radius: 3px;
     }
 
-    .nav-button:hover {
+    .menu .contact-link:hover {
       background: var(--gold);
     }
 
-    /* =========================
-       HERO
-    ========================== */
+    /* HERO */
 
     .hero {
+      min-height: 700px;
       position: relative;
+      display: flex;
+      align-items: center;
       overflow: hidden;
-
-      min-height: 720px;
 
       background:
         linear-gradient(
           90deg,
-          rgba(11,29,42,.98) 0%,
-          rgba(11,29,42,.92) 
+          rgba(7,22,32,.98) 0%,
+          rgba(7,22,32,.90) 48%,
+          rgba(7,22,32,.55) 100%
+        ),
+        url("Screenshot_٢٠٢٦-٠٩-٢٨-٠٣-٠٢-٢٩-٢٤_1c337646f29875672b5a61192b9010f9.jpg")
+        center / cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 680px;
+      color: white;
+      padding: 90px 0;
+    }
+
+    .label {
+      color: var(--gold2);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(48px, 7vw, 78px);
+      line-height: 1.15;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: var(--gold2);
+    }
+
+    .hero p {
+      max-width: 590px;
+      color: rgba(255,255,255,.76);
+      font-size: 17px;
+      font-weight: 300;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-left: 8px;
+      transition: .25s;
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: white;
+    }
+
+    .button-gold:hover {
+      background: var(--gold2);
+      color: var(--dark);
+    }
+
+    .button-border {
+      border: 1px solid rgba(255,255,255,.4);
+      color: white;
+    }
+
+    .button-border:hover {
+      border-color: var(--gold2);
+      color: var(--gold2);
+    }
+
+    /* INTRO */
+
+    .intro {
+      background: var(--cream);
+      padding: 35px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .intro-item {
+      text-align: center;
+      padding: 10px 25px;
+      border-left: 1px solid #ddd7cc;
+    }
+
+    .intro-item:last-child {
+      border-left: 0;
+    }
+
+    .intro-item strong {
+      display: block;
+      color: var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size: 26px;
+    }
+
+    .intro-item span {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      max-width: 650px;
+      margin-bottom: 50px;
+    }
+
+    .section-title small {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .section-title h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--dark);
+      font-size: clamp(37px, 5vw, 55px);
+      line-height: 1.2;
+      margin: 10px 0 15px;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      font-size: 15px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: white;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service {
+      padding: 32px;
+      min-height: 230px;
+      border: 1px solid #e9e6e0;
+      transition: .3s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+      box-shadow: 0 20px 50px rgba(0,0,0,.08);
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .service h3 {
+      color: var(--dark);
+      font-size: 19px;
+      margin-bottom: 9px;
+    }
+
+    .service p {
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: var(--cream);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-box {
+      min-height: 480px;
+      background: var(--dark);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .about-box::before {
+      content: "";
+      width: 330px;
+      height: 430px;
+      border: 1px solid rgba(216,192,143,.35);
+      position: absolute;
+      transform: rotate(7deg);
+    }
+
+    .about-letter {
+      width: 130px;
+      height: 130px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold2);
+      font-family: "Playfair Display", serif;
+      font-size: 70px;
+      position: relative;
+    }
+
+    .about-text h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--dark);
+      font-size: clamp(38px, 5vw, 55px);
+      line-height: 1.2;
+      margin: 10px 0 25px;
+    }
+
+    .about-text p {
+      color: var(--gray);
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .about-points {
+      margin-top: 25px;
+    }
+
+    .about-points div {
+      margin-bottom: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .about-points span {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      background: var(--gold);
+      border-radius: 50%;
+      margin-left: 9px;
+    }
+
+    /* CASE */
+
+    .case {
+      background: white;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .case-photo {
+      box-shadow: 0 25px 70px rgba(0,0,0,.13);
+      overflow: hidden;
+    }
+
+    .case-photo img {
+      transition: .5s;
+    }
+
+    .case-photo:hover img {
+      transform: scale(1.02);
+    }
+
+    .case-text h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--dark);
+      font-size: clamp(35px, 4vw, 51px);
+      line-height: 1.25;
+      margin-bottom: 20px;
+    }
+
+    .case-text > p {
+      color: var(--gray);
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    .details {
+      border-top: 1px solid #e5e2dc;
+      border-bottom: 1px solid #e5e2dc;
+    }
+
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      padding: 13px 0;
+      border-bottom: 1px solid #eeeae4;
+      font-size: 13px;
+    }
+
+    .detail:last-child {
+      border-bottom: 0;
+    }
+
+    .detail span {
+      color: var(--gray);
+    }
+
+    .detail strong {
+      color: var(--dark);
+    }
+
+    /* DOCTOR */
+
+    .doctor {
+      background: var(--dark);
+      color: white;
+    }
+
+    .doctor-grid {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 75px;
+      align-items: center;
+    }
+
+    .doctor-card {
+      min-height: 430px;
+      background: var(--dark2);
+      border: 1px solid rgba(216,192,143,.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .doctor-letter {
+      width: 180px;
+      height: 180px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Playfair Display", serif;
+      font-size: 95px;
+      color: var(--gold2);
+    }
+
+    .doctor-text small {
+      color: var(--gold2);
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .doctor-text h2 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(42px, 5vw, 63px);
+      line-height: 1.15;
+      margin: 10px 0 20px;
+    }
+
+    .doctor-text h3 {
+      color: var(--gold2);
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .doctor-text p {
+      max-width: 650px;
+      color: rgba(255,255,255,.68);
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--cream);
+    }
+
+    .contact-box {
+      background: white;
+      padding: 55px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      box-shadow: 0 25px 70px rgba(0,0,0,.08);
+    }
+
+    .contact-text h2 {
+      font-family: "Playfair Display", serif;
+      color: var(--dark);
+      font-size: clamp(38px, 5vw, 55px);
+      line-height: 1.2;
+      margin: 10px 0 18px;
+    }
+
+    .contact-text p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    .contact-info div {
+      padding: 18px 0;
+      border-bottom: 1px solid #e7e3dc;
+    }
+
+    .contact-info small {
+      display: block;
+      color: var(--gold);
+      font-size: 11px;
+    }
+
+    .contact-info strong {
+      color: var(--dark);
+      font-size: 14px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #07151f;
+      color: rgba(255,255,255,.6);
+      padding: 35px 0 20px;
+      text-align: center;
+    }
+
+    footer strong {
+      display: block;
+      color: white;
+      font-family: "Playfair Display", serif;
+      font-size: 22px;
+      margin-bottom: 7px;
+    }
+
+    footer span {
+      color: var(--gold2);
+    }
+
+    footer p {
+      font-size: 11px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .menu {
+        gap: 12px;
+      }
+
+      .menu a {
+        font-size: 11px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .case-grid,
+      .doctor-grid,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .doctor-grid {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      header {
+        position: relative;
+      }
+
+      .nav {
+        height: 70px;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .hero {
+        min-height: 620px;
+      }
+
+      .hero-content {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .button {
+        margin-bottom: 10px;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-item {
+        border-left: 0;
+        border-bottom: 1px solid #ddd7cc;
+        padding: 18px;
+      }
+
+      .intro-item:last-child {
+        border-bottom: 0;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service {
+        min-height: auto;
+      }
+
+      .about-box {
+        min-height: 350px;
+      }
+
+      .case-grid {
+        gap: 35px;
+      }
+
+      .doctor-card {
+        min-height: 340px;
+      }
+
+      .contact-box {
+        padding: 30px 22px;
+        gap: 35px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#home" class="brand">
+
+        <div class="brand-icon">S</div>
+
+        <div>
+          <strong>شام لطب الأسنان</strong>
+          <small>SHAM DENTAL CLINIC</small>
+        </div>
+
+      </a>
+
+      <nav class="menu">
+        <a href="#home">الرئيسية</a>
+        <a href="#services">الخدمات</a>
+        <a href="#about">عن العيادة</a>
+        <a href="#cases">الحالات</a>
+        <a href="#doctor">الطبيب</a>
+        <a href="#contact" class="contact-link">التواصل</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="label">
+          عيادة شام لطب الأسنان
+        </div>
+
+        <h1>
+          ابتسامة<br>
+          <span>تُصنع بدقة.</span>
+        </h1>
+
+        <p>
+          نؤمن أن جمال الابتسامة يبدأ من صحة الأسنان،
+          وأن التفاصيل الصغيرة هي التي تصنع النتيجة الكبيرة.
+        </p>
+
+        <a href="#contact" class="button button-gold">
+          احجز استشارتك
+        </a>
+
+        <a href="#cases" class="button button-border">
+          شاهد الحالة
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div class="container intro-grid">
+
+      <div class="intro-item">
+        <strong>01</strong>
+        <span>دقة في التفاصيل</span>
+      </div>
+
+      <div class="intro-item">
+        <strong>02</strong>
+        <span>رؤية جمالية</span>
+      </div>
+
+      <div class="intro-item">
+        <strong>03</strong>
+        <span>عناية متكاملة</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <small>خدماتنا</small>
+
+        <h2>
+          صحة وجمال في رؤية واحدة.
+        </h2>
+
+        <p>
+          خدمات طب الأسنان التي تجمع بين الاهتمام بالصحة
+          والدقة في التفاصيل الجمالية.
+        </p>
+
+      </div>
+
+
+      <div class="services-grid">
+
+        <article class="service">
+          <div class="service-number">01</div>
+          <h3>تصميم الابتسامة</h3>
+          <p>
+            دراسة الابتسامة وتناسقها مع ملامح الوجه
+            للوصول إلى نتيجة طبيعية ومتوازنة.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-number">02</div>
+          <h3>التركيبات السنية</h3>
+          <p>
+            حلول ترميمية وجمالية تناسب احتياجات كل حالة.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-number">03</div>
+          <h3>علاج اللثة</h3>
+          <p>
+            الاهتمام بصحة اللثة والمشكلات التي تؤثر
+            على صحة الفم والمظهر الجمالي.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-number">04</div>
+          <h3>الترميم التجميلي</h3>
+          <p>
+            تحسين شكل الأسنان واستعادة الوظيفة
+            والمظهر بطريقة متوازنة.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-number">05</div>
+          <h3>العناية الوقائية</h3>
+          <p>
+            متابعة دورية للحفاظ على صحة الأسنان واللثة.
+          </p>
+        </article>
+
+        <article class="service">
+          <div class="service-number">06</div>
+          <h3>الاستشارات</h3>
+          <p>
+            تقييم الحالة ومناقشة الخيارات العلاجية
+            المناسبة قبل البدء.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div class="container about-grid">
+
+      <div class="about-box">
+        <div class="about-letter">S</div>
+      </div>
+
+      <div class="about-text">
+
+        <div class="label">
+          عن شام
+        </div>
+
+        <h2>
+          طب الأسنان<br>
+          برؤية أكثر هدوءاً.
+        </h2>
+
+        <p>
+          في عيادة شام لطب الأسنان نعمل على تقديم
+          تجربة علاجية تجمع بين المعرفة الطبية
+          والاهتمام بالتفاصيل الجمالية.
+        </p>
+
+        <p>
+          تبدأ كل حالة بفهم احتياجات المريض ودراسة
+          وضع الأسنان واللثة، ثم اختيار الخطة المناسبة.
+        </p>
+
+        <div class="about-points">
+
+          <div>
+            <span></span>
+            دراسة وتشخيص الحالة
+          </div>
+
+          <div>
+            <span></span>
+            خطة علاجية واضحة
+          </div>
+
+          <div>
+            <span></span>
+            اهتمام بالتفاصيل الجمالية
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CASE -->
+
+  <section class="case" id="cases">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <small>حالة من العيادة</small>
+
+        <h2>
+          النتيجة تبدأ من فهم المشكلة.
+        </h2>
+
+      </div>
+
+
+      <div class="case-grid">
+
+        <div class="case-photo">
+
+          <img
+            src="Screenshot_٢٠٢٦-٠٩-٢٨-٠٣-٠٢-٢٩-٢٤_1c337646f29875672b5a61192b9010f9.jpg"
+            alt="حالة من عيادة شام لطب الأسنان"
+          >
+
+        </div>
+
+
+        <div class="case-text">
+
+          <h2>
+            ابتسامة سابقة أدّت إلى التهاب لثة معمّم ومظهر جمالي غير مقبول.
+          </h2>
+
+          <p>
+            نوع العمل واللون موضحان ضمن تفاصيل الحالة.
+          </p>
+
+          <div class="details">
+
+            <div class="detail">
+              <span>نوع العمل</span>
+              <strong>سوبرانو</strong>
+            </div>
+
+            <div class="detail">
+              <span>اللون</span>
+              <strong>B1</strong>
+            </div>
+
+            <div class="detail">
+              <span>العيادة</span>
+              <strong>شام لطب الأسنان</strong>
+            </div>
+
+            <div class="detail">
+              <span>الطبيب</span>
+              <strong>عامر العبود</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DOCTOR -->
+
+  <section class="doctor" id="doctor">
+
+    <div class="container doctor-grid">
+
+      <div class="doctor-card">
+        <div class="doctor-letter">A</div>
+      </div>
+
+      <div class="doctor-text">
+
+        <small>الطبيب</small>
+
+        <h2>
+          الدكتور<br>
+          عامر العبود
+        </h2>
+
+        <h3>
+          شام لطب الأسنان
+        </h3>
+
+        <p>
+          اهتمام بالتفاصيل ورؤية تجمع بين الجانب الصحي
+          والجانب الجمالي في علاج الأسنان.
+        </p>
+
+        <p>
+          الهدف هو الوصول إلى نتيجة طبيعية ومتوازنة
+          تبدأ من التشخيص الصحيح والخطة العلاجية المناسبة.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <div class="contact-text">
+
+          <div class="label">
+            التواصل
+          </div>
+
+          <h2>
+            لنبدأ بابتسامتك.
+          </h2>
+
+          <p>
+            سيتم إضافة بيانات التواصل الرسمية للعيادة
+            عند تزويدنا بها.
+          </p>
+
+        </div>
+
+
+        <div class="contact-info">
+
+          <div>
+            <small>العيادة</small>
+       </body>
+</html>
